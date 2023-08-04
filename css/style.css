@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: linear-gradient(orange, yellow);
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.calculator {
+  position: relative;
+  height: auto;
+  width: auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 30px black;
+  background-color: white;
+  border: 1px solid black;
+}
+.calculator.dark {
+  background-color: black;
+}
+.calculator.dark #display {
+  color: white;
+}
+.calculator .display-screen {
+  background-color: rgb(145, 219, 145);
+  font-size: 2em;
+  padding: 10px;
+  min-height: 42px;
+  border-radius: 5px;
+  display: flex;
+  width: auto;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+  margin-top: 40px;
+}
+.calculator .display-screen #display {
+  color: rgb(2, 58, 2);
+  margin: 0 10px;
+  height: 120px;
+  width: auto;
+  display: flex;
+}
+.calculator #clear {
+  color: rgb(73, 73, 73);
+  background-color: greenyellow;
+}
+.calculator .button-number {
+  color: black;
+  background-color: white;
+  border: solid 1px black;
+}
+.calculator .button-operator {
+  color: rgb(73, 73, 73);
+  background-color: greenyellow;
+}
+.calculator .btn-equal {
+  color: rgb(255, 255, 255);
+  background-color: rgb(136, 226, 1);
+  height: 130px;
+  border-radius: 30px;
+}
+
+.theme-toggler {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  color: white;
+  border: solid 1px black;
+  cursor: pointer;
+  z-index: 1;
+}
+.theme-toggler .active {
+  color: black;
+  position: relative;
+}
+.theme-toggler .active::before {
+  background-color: white;
+  border: solid black 1px;
+}
+.theme-toggler:before {
+  content: "";
+  height: 30px;
+  width: 30px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid black;
+  z-index: -1;
+  position: absolute;
+}
+
+.theme-toggler .active {
+  color: black;
+}
+.theme-toggler .active::before {
+  background-color: white;
+  border: black solid 1px;
+}
+
+button {
+  height: 60px;
+  width: 60px;
+  border: 0;
+  border-radius: 50%;
+  margin: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: bolder;
+  transition: all 200ms ease;
+}
+button:hover {
+  transform: scale(1.1);
+}/*# sourceMappingURL=style.css.map */
